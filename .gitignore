@@ -1,0 +1,244 @@
+############################################
+# Deep Learning (CV) Universal .gitignore
+# Targets: detection / classification / segmentation
+############################################
+
+# ----------------------------
+# OS / System junk
+# ----------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----------------------------
+# Python cache / build artifacts
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+*.pdb
+
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+.cache/
+*.log
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+profile_default/
+.ipython/
+
+# ----------------------------
+# Virtual env / Conda / Poetry
+# ----------------------------
+.venv/
+venv/
+ENV/
+env/
+.conda/
+conda-bld/
+# (optional) if you use pip-tools
+*.requirements.txt
+
+# Poetry
+poetry.lock
+
+# ----------------------------
+# IDE / Editor
+# ----------------------------
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+*~
+.nvim/
+.vim/
+Session.vim
+
+# ----------------------------
+# Data / Datasets (DO NOT COMMIT)
+# ----------------------------
+# common dataset dirs
+data_local/
+raw_data/
+external_data/
+downloads/
+cache_data/
+
+# COCO / VOC style extracted folders (if you put them inside repo)
+**/coco*/
+**/VOCdevkit/
+**/VOC20*/
+**/ILSVRC*/
+**/ImageNet*/
+**/OpenImages*/
+**/LaSOT*/
+**/GOT-10k*/
+**/MOT*/
+**/BDD100K*/
+**/Cityscapes*/
+**/CrowdHuman*/
+**/VisDrone*/
+**/DOTA*/
+**/xView*/
+**/Objects365*/
+
+# large annotation/data files if kept locally
+*.tfrecord
+*.hdf5
+*.h5
+*.lmdb
+*.mdb
+*.npz
+*.npy
+*.parquet
+*.arrow
+*.pkl
+*.pickle
+
+# media / large assets (usually keep via git-lfs, otherwise ignore)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.gz
+*.bz2
+*.xz
+
+# images/videos typically should not be committed unless small demo assets
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.gif
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tif
+*.tiff
+
+# If you DO want to keep small demo images, put them in assets/ and unignore:
+!assets/
+!assets/**
+
+# ----------------------------
+# Model weights / checkpoints (DO NOT COMMIT)
+# ----------------------------
+checkpoints/
+checkpoint/
+ckpt/
+ckpts/
+weights/
+weight/
+pretrained/
+pretrain/
+models/*.pth
+models/*.pt
+models/*.ckpt
+
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.tflite
+*.mlmodel
+*.pb
+*.pdparams
+*.pdmodel
+*.params
+*.bin
+
+# ----------------------------
+# Training outputs / experiments
+tensorboard/
+wandb/
+mlruns/
+lightning_logs/
+ray_results/
+hydra_outputs/
+multirun/
+
+# Distributed training / Slurm / temp
+# ----------------------------
+*.ckpt.tmp
+*.tmp
+*.temp
+tmp/
+temp/
+# Slurm
+slurm-*.out
+slurm-*.err
+*.out
+*.err
+
+# ----------------------------
+# CUDA / compile cache
+# ----------------------------
+*.cu.o
+*.o
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+# torch extensions
+torch_extensions/
+**/.torch_extensions/
+
+# ----------------------------
+# Config overrides / local secrets
+# ----------------------------
+# Keep configs/ tracked, but ignore local overrides
+configs/local/
+config.local.*
+*.local.yaml
+*.local.yml
+.env
+.env.*
+secrets/
+*.key
+*.pem
+
+# ----------------------------
+# Optional: keep only source & minimal assets
+# ----------------------------
+# If you prefer a "whitelist" style ignore, do NOT enable this section.
+# It is here just as a reference.
+# *
+# !src/
+# !src/**
+# !configs/
+# !configs/**
+# !README.md
+# !requirements.txt
+# !pyproject.toml
+# !assets/
+# !assets/**
+

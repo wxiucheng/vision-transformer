@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision-Transformer</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/wxiucheng/blog-images/main/xiaohui.jpg" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!--  support TeX in .html file  -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+  <!--  support TeX in .html file  -->
+
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CIFAR-10 Classifier</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://codegoat24.github.io/"><b>Xiucheng Wang</b></a>,</span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup></sup>Beihang University</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://github.com/wxiucheng/cifar10-classifier"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/wxiucheng/cifar10-classifier"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Begin Teaser -->
+<div>
+  <!-- <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3">Universal-Style Human Customization</h2>
+  </div> -->
+  </br>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div> 
+        <img src="./static/images/model_predict.png"
+        class="interpolation-image"
+        alt="Interpolate start reference image."/>
+        
+        <!-- <img src="./static/images/results_of_single_concept.png"
+        class="interpolation-image"
+        alt="Interpolate start reference image."/> -->
+        </div>
+      <div class="hero-body">
+        <h2 class="subtitle has-text-justified">
+          <p class="has-text-centered">gradio demo使用展示.</p>
+        </h2>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- End Teaser -->
+
+
+<!-- Begin abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <!-- <img src='static/images/method_overview.png' id="framework"><br><br> -->
+        <div class="content has-text-justified">
+          <p>
+            简单 CNN 与 ResNet18 两套模型，支持预训练微调;统一的 YAML 配置驱动（模型/数据/训练）;训练、验证、测试全流程与最优/最后权重保存;评估脚本与 Gradio 可视化 Demo;
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End abstract -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">图片展示</h2>
+
+        <!-- 建议把图片放到 static/images/ 下 -->
+        <img src="./static/images/dog1.png" id="framework"><br>
+
+        <div class="content has-text-justified">
+          <p class="has-text-centered">
+            这里展示模型在 CIFAR-10 上的预测效果示例（GT / Pred 可视化）。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/pdf/2405.14701">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/CodeGoat24/DreamText" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="content has-text-centered">
+        <div class="content">
+          <p>
+            This website was modified from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+ 

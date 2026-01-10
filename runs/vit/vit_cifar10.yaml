@@ -1,0 +1,26 @@
+# configs/vit_cifar10.yaml
+
+model:
+  num_classes: 10
+  img_size: 32
+  patch_size: 4  # 8 * 8个patch,token
+  in_channels: 3
+  model_dim: 128
+  max_len: 65
+  drop: 0.1
+  num_heads: 8
+  mlp_ratio: 4
+  qkv_bias: true
+  num_layers: 6
+
+dataset:
+  data_root: data/cifar-10-python
+  val_ratio: 0.1
+  batch_size: 512
+  num_workers: 4
+
+train:
+  seed: 10
+  lr: 1e-3
+  epochs: 50
+  checkpoint_out_dir: outputs/checkpoints/vit_cifar10
